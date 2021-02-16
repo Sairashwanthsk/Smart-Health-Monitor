@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Health Monitor Admin</title>
+    <link rel="stylesheet" type="text/css" href="css/admindashboard.css">
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.2/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.2/firebase-firestore.js"></script>
+    <script defer src="js/admindashboard.js"></script>
+</head>
+<header>
+    <div class="main">
+        <div class="logo">
+            <img src="logo.png">
+        </div>
+        <div class="title">
+            <h1>Smart Health Monitor</h1>
+        </div>
+        <button type="submit" name="logout" onclick="logout()" class="btn">Logout</button>
+    </div>
+</header>
+<body>
+    <div id="content">
+        <a id="Usershealth" href="adminuh.html">
+            <h4>User Health</h4>
+        </a>
+        <a id="Usersdetails" href="adminud.html">
+            <h4>User Details</h4>
+        </a>
+        <a id="message" href="adminmessage.html">
+            <h4>Message center</h4>
+        </a>
+        <a id="queries" onclick="gmail()">
+            <h4>Queries</h4>
+        </a>
+
+    </div>
+</body>
+</html>

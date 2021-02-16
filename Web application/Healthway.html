@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <title>Health monitor</title>
+    <link rel="stylesheet" type="text/css" href="css/Healthway1.css">
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.2/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.2/firebase-firestore.js"></script>
+    <script defer src="js/healthway.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+        <header>
+            <div class="main">
+                <div class="logo">
+                    <img src="logo.png">
+                </div>
+                <div class="title">
+                    <h1>Smart Health Monitor</h1>
+                </div>
+                <li>
+                    <a href="Dashboard.html">Dashboard</a>
+                    <a id="pro" href="profile1.html" class="profile">Profile</a>
+                    <button type="submit" name="logout" onclick="logout()" class="btn">Logout</button>
+                </li>
+            </div>                            
+        </header>
+
+<body>  
+    <div id="bodytitle">
+        <h1>Health Summary ></h1>
+    </div>
+    <div id="track">
+        <table class="hwtable table-striped">
+            <thead>
+                <tr>
+                    <th>Parameters</th>
+                    <th>Readings</th>
+                    <th>Status</th>
+                    <th>Normal values</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="tem"></tr>
+                <tr id="pul"></tr>
+                <tr id="glu"></tr>
+                <tr id="bp"></tr>
+                <tr id="spo"></tr>
+                <tr id="cho"></tr>
+                <tr id="res"></tr>
+            </tbody>
+        </table> 
+    </div>
+    <div id="medicaladvice">
+        <div id="medicaladviceheader"><h3>Medical Advice</h3></div>
+        <div id="medicaladvicebody"></div>
+    </div>
+</body>
+</html>

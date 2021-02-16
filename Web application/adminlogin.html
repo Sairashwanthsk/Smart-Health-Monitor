@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Health Monitor</title>
+    <link rel="stylesheet" type="text/css" href="css/admindashboard.css">
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.2/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.2/firebase-firestore.js"></script>
+    <script defer src="js/admindashboard.js"></script>
+</head>
+<header>
+    <div class="main">
+        <div class="logo">
+            <img src="logo.png">
+        </div>
+        <div class="title">
+            <h1>Smart Health Monitor</h1>
+        </div>
+    </div>
+</header>
+<body>
+    <div class="header">
+        <h2>Login</h2>
+    </div>
+    <section>
+        <div class="input-group">
+            <label>Email-Id</label>
+            <input type="text" id="email" >
+        </div>
+        <div class="input-group">
+            <label>Password</label>
+            <input type="password" id="password">
+        </div>
+        <div class="input-group">
+            <button type="submit" id="login" class="loginbtn" onclick="adminlogin()">Login</button>
+        </div>
+    </section>
+</body>
+</html>

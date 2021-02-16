@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Health Monitor Admin</title>
+    <link rel="stylesheet" type="text/css" href="css/adminuh.css">
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.2/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.2/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script defer src="js/adminuh.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+</head>
+<header>
+    <div class="main">
+        <div class="logo">
+            <img src="logo.png">
+        </div>
+        <div class="title">
+            <h1>Smart Health Monitor</h1>
+            <li>
+                <a href="admindashboard.html">Dashboard</a>
+                <button type="submit" name="logout" onclick="logout()" class="btn">Logout</button>
+            </li>
+        </div>
+    </div>
+</header>
+<body>
+    <div id="usershealthbody">
+        <h5>User's health</h5>
+        <input type="date" id="date">
+        <select id="pick" class="select" required>
+            <option value="all">Last Recorded</option>
+            <option value="bydate">By Date</option>
+        </select> 
+        
+        <input type="text" id="searchname" placeholder="Search by name" onkeyup="search()">
+        <div id="uhtable">
+            <table class="table" id="table">
+                <thead>
+                    <th>Name</th>
+                    <th>Date</th>
+                    <th>Health Status</th>
+                    <th>Pulse</th>
+                    <th>SpO2</th>
+                    <th>Glucose</th>
+                    <th>Respiration rate</th>
+                    <th>Cholesterol</th>
+                    <th>Blood pressure</th>
+                </thead>
+                <tbody id="uhbody"></tbody>
+            </table>
+        </div>
+        
+    </div>
+</body>
+</html>

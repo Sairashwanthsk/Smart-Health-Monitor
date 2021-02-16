@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/*Head of website*/
+header{
+    height: 60px;
+    width: 100%;
+    background-color: rgba(26, 100, 150, 0.986);
+}
+li{
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+    margin-right: 25px;
+}
+
+li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 19px 10px;
+    position: relative;
+    top: -25px;
+    left: -20px;
+    border: 1px solid transparent;
+    transition: 0.4s ease;
+    display: inline-block;
+}
+li a#pro{
+    text-align: center;
+    width: 60px;
+}
+li a:hover{
+    text-decoration: none;
+    background-color:  rgba(255, 255, 255, 0.829);
+    color: black;
+}
+li a.active{
+    background-color:  rgba(255, 255, 255, 0.829);
+    color: black;
+}
+.btn{
+    position: relative;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    top: -25px;
+    background-color: rgba(26, 100, 150, 0.986);
+    color: white;
+}
+.btn:hover{
+    background-color: rgb(204, 41, 20);
+}
+.logo img{
+    float: left;
+    width: 70px;
+    height: 100%;
+}
+.title h1{
+    float: left;
+    position: relative;
+    top: 15px;
+    left: 20px;
+    color: white;
+    font-size: large;
+}
+
+/*Body*/
+body {
+    background-image:linear-gradient(rgba(174, 174, 223, 0),rgba(174, 174, 223, 0)), url(../background5.jpeg);
+    height: 120vh;
+    background-size: cover;
+    
+}
+
+/*Health Status heading*/
+#bodytitle{
+    position: relative;
+    top: 20px;
+    left: 30px;
+    height: 30px;
+    width: 160px;
+}
+#bodytitle h1{
+    float: left;
+    color: white;
+    font-size: medium;
+    padding: 5px 8px;
+    border: 1px solid rgba(255, 255, 255, 0.267);
+    border-radius: 10px;
+    background-color:rgba(26, 100, 150, 0.788);
+}
+
+
+#track{
+    float: left;
+    width: 1000px;
+    height: 320px;
+    position: relative;
+    top: 20px;
+    left: 50px;
+}
+/*heading*/
+thead tr{
+    width: 1000px;
+    height: 30px;
+    background-color:rgba(26, 100, 150, 0.986);
+    color: white;
+    font-size: large;
+    border-radius: 10px;
+}
+
+.hwtable{
+    background-color: white;
+    height: 320px;
+    width: 1000px;
+    padding-left: 30px;
+    border-radius: 10px;
+}
+th{
+    padding-left: 50px;
+}
+td{
+    padding-left: 50px;
+    width: 250px;
+}
+
+#medicaladvice{
+    float: left;
+    width: 1000px;
+    height: 190px;
+    position: relative;
+    top: 40px;
+    left: 50px;
+}
+#medicaladviceheader{
+    color: white;
+    height: 40px;
+    border-radius: 10px 10px 0px 0px;
+    background-color: rgba(26, 100, 150, 0.986);
+    text-align: center;
+}
+#medicaladviceheader h3{
+    position: relative;
+    top: 5px;
+}
+#medicaladvicebody{
+    height: 150px;
+    background-color: rgba(245, 245, 245, 0.849);
+    border-radius: 0px 0px 10px 10px;
+    overflow-y: scroll;
+    padding: 20px;
+    font-size: 20px;
+}

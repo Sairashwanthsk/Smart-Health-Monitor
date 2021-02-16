@@ -1,0 +1,302 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/*Head of website*/
+header{
+    height: 60px;
+    width: 100%;
+    background-color: rgba(26, 100, 150, 0.986);
+}
+li{
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+    margin-right: 25px;
+}
+
+li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 19px 10px;
+    position: relative;
+    top: -25px;
+    left: -20px;
+    border: 1px solid transparent;
+    transition: 0.4s ease;
+    display: inline-block;
+}
+li a#pro{
+    text-align: center;
+    width: 60px;
+}
+li a:hover{
+    background-color:  rgba(255, 255, 255, 0.829);
+    color: black;
+}
+li a.active{
+    background-color:  rgba(255, 255, 255, 0.829);
+    color: black;
+}
+.btn{
+    position: relative;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    top: -25px;
+    background-color: rgba(26, 100, 150, 0.986);
+    color: white;
+}
+.btn:hover{
+    background-color: rgb(204, 41, 20);
+}
+.logo img{
+    float: left;
+    width: 70px;
+    height: 100%;
+}
+.title h1{
+    float: left;
+    position: relative;
+    top: 15px;
+    left: 20px;
+    color: white;
+    font-size: large;
+}
+body {
+    background-image:linear-gradient(rgba(174, 174, 223, 0),rgba(174, 174, 223, 0)), url(../background5.jpeg);
+    height: 100vh;
+    background-size: cover;
+    margin: 0;
+}
+
+.bodytitle h1{
+    float: left;
+    position: relative;
+    top: 20px;
+    left: 30px;
+    color: white;
+    font-size: medium;
+    padding: 5px 8px;
+    border: 1px solid rgba(255, 255, 255, 0.267);
+    border-radius: 10px;
+    background-color:rgba(26, 100, 150, 0.788);
+}
+#hhealthsummary{
+    float: right;
+    background-color: white;
+    width: 270px;
+    height: 400px;
+    position: relative;
+    top: 70px;
+    left: 260px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#hhealthsummary h3{
+    text-align: center;
+    background-color: #145992;
+    color: white;
+    height: 40px;
+    border-radius: 10px 10px 0px 0px;
+}
+.form{
+    float: right;
+    position: relative;
+    top: -400px;
+    left: -25px;
+    width: 260px
+}
+
+.header{
+    position: relative;
+    height: 20px;
+    width: 250px;
+    font-size: 10px;
+    color: white;
+    background: #145992;
+    border: 1px solid #b0c4de;
+    border-bottom: none;
+    border-radius: 10px 10px 0px 0px;
+    padding: 10px;
+}
+.headertitle{
+    position: relative;
+    left: 90px;
+    width: 20px;
+}
+.Record{
+    position: relative;
+    width: 230px;
+    height: 270px;
+    padding: 20px;
+    border-top: none;
+    border: 1px solid #b0c4de;
+    border-radius: 0px 0px 10px 10px;
+    background: white;
+}
+
+.input-group label{
+    display: block;
+    text-align: left;
+    margin: 3px;
+}
+
+.btn1{
+    position: relative;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    top: 18px;
+    left: 10px;
+    background-color: rgba(26, 100, 150, 0.986);
+    color: white;
+}
+.btn1:hover{
+    background-color: yellowgreen;
+    color: whitesmoke;
+}
+#track1{
+    float: left;
+    width: 800px;
+    height: 250px;
+    position: relative;
+    top: -330px;
+    left: 20px;
+}
+#track1 #trackhead1{
+    background-color: #145992; 
+    color:white;
+    width: 800px;
+    height: 40px;
+    border-radius: 10px 10px 0px 0px;
+    display: inline-flex;
+}
+#track1 #trackhead1 #m{
+    position: relative;
+    left: 60px;
+    top: 7px;
+}
+#track1 #trackhead1 #d{
+    position: relative;
+    left: 180px;
+    top: 7px;
+}
+#track1 #trackhead1 #p{
+    position: relative;
+    left: 340px;
+    top: 7px;
+}
+#track1 #trackhead1 #s{
+    position: relative;
+    left: 480px;
+    top: 7px;
+}
+#trackbody1{
+    width: 800px;
+    height: 210px;
+    background-color: whitesmoke;
+    border-radius: 0px 0px 10px 10px;
+    overflow-y: scroll;
+}
+#track2{
+    float: left;
+    width: 800px;
+    height: 250px;
+    position: relative;
+    top: -310px;
+    left: 20px;
+}
+#track2 #trackhead2{
+    background-color: #145992; 
+    color:white;
+    width: 800px;
+    height: 40px;
+    border-radius: 10px 10px 0px 0px;
+    display: inline-flex;
+}
+#track2 #trackhead2 #m{
+    position: relative;
+    left: 60px;
+    top: 7px;
+}
+#track2 #trackhead2 #d{
+    position: relative;
+    left: 180px;
+    top: 7px;
+}
+#track2 #trackhead2 #bp{
+    position: relative;
+    left: 290px;
+    top: 7px;
+}
+#track2 #trackhead2 #s{
+    position: relative;
+    left: 400px;
+    top: 7px;
+}
+#trackbody2{
+    width: 800px;
+    height: 210px;
+    background-color: whitesmoke;
+    border-radius: 0px 0px 10px 10px;
+    overflow-y: scroll;
+}
+#track3{
+    float: left;
+    width: 800px;
+    height: 250px;
+    position: relative;
+    top: -290px;
+    left: 20px;
+}
+#track3 #trackhead3{
+    background-color: #145992; 
+    color:white;
+    width: 800px;
+    height: 40px;
+    border-radius: 10px 10px 0px 0px;
+    display: inline-flex;
+}
+#track3 #trackhead3 #m{
+    position: relative;
+    left: 60px;
+    top: 7px;
+}
+#track3 #trackhead3 #d{
+    position: relative;
+    left: 180px;
+    top: 7px;
+}
+#track3 #trackhead3 #c{
+    position: relative;
+    left: 330px;
+    top: 7px;
+}
+#track3 #trackhead3 #s{
+    position: relative;
+    left: 440px;
+    top: 7px;
+}
+#trackbody3{
+    width: 800px;
+    height: 210px;
+    background-color: whitesmoke;
+    border-radius: 0px 0px 10px 10px;
+    overflow-y: scroll;
+}
+
+#note{
+    float:left;
+    position: relative;
+    top: -350px;
+    left: 20px;
+    width: 1050px;
+    height: 110px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    background-color: rgba(245, 245, 245, 0.562);
+    color: navy;
+}

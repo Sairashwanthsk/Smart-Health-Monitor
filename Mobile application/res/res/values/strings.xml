@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Smart Health Monitor</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="normal">Normal</string>
+    <string name="elevatedbp">Elevated BP</string>
+    <string name="highbpstage1">High BP stage-I</string>
+    <string name="highbpstage2">High BP stage-II</string>
+    <string name="highbpstage3">Hig BP stage-III</string>
+    <string name="highpulse">High Pulse</string>
+    <string name="highcholesterol">High Cholesterol</string>
+    <string name="unhealthy">UnHealthy</string>
+    <string name="healthy">Healthy</string>
+    <string name="asthma">Asthma</string>
+    <string name="bronchiectasis">Bronchiectasis</string>
+    <string name="diabetes">Diabetes</string>
+    <string name="prediabetes">Pre-Diabetes</string>
+    <string name="chd">Coronary Artery Disease</string>
+
+    <string-array name="bloodgroup">
+        <item>O+</item>
+        <item>O-</item>
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+    </string-array>
+</resources>

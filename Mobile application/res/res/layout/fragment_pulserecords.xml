@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="5dp"
+    tools:context=".pulserecords">
+
+    <TextView
+        android:id="@+id/pulsemonth"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="13sp"/>
+    <TextView
+        android:id="@+id/pulsedate"
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/pulsereading"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/pulse_status"
+        android:layout_width="87.5dp"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textColor="@color/black"/>
+
+</LinearLayout>

@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Health Monitor</title>
+    <link rel="stylesheet" type="text/css" href="css/Dashboard.css">  
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.2/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.2/firebase-firestore.js"></script>
+    <script defer src="js/dashboard.js"></script>
+</head>
+<header>
+    <div class="main">
+        <div class="logo">
+            <img src="logo.png">
+        </div>
+        <li>
+            <a class="active" href="Dashboard.html">Dashboard</a>
+            <a id="pro" href="profile1.html" class="profile">Profile</a>
+            <button type="submit" name="logout" onclick="logout()" class="btn">Logout</button>
+        </li>
+        <div class="title">
+            <h1>Smart Health Monitor</h1>
+        </div>
+    </div>
+        
+</header>
+<body>
+    <div id="content">
+        <a id="Hearthealth" href="hearthealth.html">
+            <h4>Heart Health</h4>
+        </a>
+        <a id="Glucoselevel" href="glucose.html">
+            <h4>Glucose Level</h4>
+        </a>
+        <a id="respiration" href="Respiration.html">
+            <h4>Respiration</h4>
+        </a>
+        <a id="healthway" href="Healthway.html">
+            <h4>Healthway</h4>
+        </a>
+        <div id="notification">
+            <div id="notificationbody"></div>
+        </div>
+    </div>
+</body>
+</html>

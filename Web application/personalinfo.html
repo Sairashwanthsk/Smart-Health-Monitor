@@ -1,0 +1,123 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information</title>
+    <link rel="stylesheet" href="css/login.css">
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.2/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.2/firebase-firestore.js"></script>
+    <script defer src="js/credentials.js"></script>
+</head>
+<body>
+    <form id="perinfo">
+        <div class="header">
+            <h2>Personal Details</h2>
+        </div>
+        <section>
+            <div class="input-group">
+                <label>Name</label>
+                <input type="text" class="name" required>
+            </div>
+            <div class="input-group">
+                <label>Birth Date</label>
+                <input type="date" class="birthdate" required>
+            </div>
+            <div class="input-group">
+                <label>Age</label>
+                <input type="number" class="age" required>
+            </div>
+            <div class="input-group">
+                <label>Gender</label>
+                <select name="gender" class="gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label>Blood Group</label>
+                    <input type="text" class="bloodgroup" required>
+            </div>
+            <div class="input-group">
+                <label>Height (cm's)</label>
+                    <input type="number" class="height" required>
+            </div>
+            <div class="input-group">
+                <label>Weight (kg's)</label>
+                    <input type="number" class="weight" required>
+            </div>
+            <div class="input-group">
+                <button type="submit" id="next1" class="btn">Next</button>
+            </div>
+        </section>
+    </form>
+    <form id="medhis" hidden>
+        <div class="header1">
+            <h2>Medical History</h2>
+        </div>
+        <section class="section1">
+            <div class="input-group">
+                <label>1. Please list any drug allergies:</label>
+                <input type="text" class="drug_allergies" placeholder="eg: Penicillin and related antibiotics or any other or None" required>
+            </div>
+            <div class="input-group" id="illness">
+                <label>2. Have you ever had(Yes/No):</label>
+                <div>
+                    <label>Asthma:</label>
+                    <select name="asthma" class="asthma" required>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div><br />
+                <div>
+                    <label>Coronary Artery Disease(CHD):</label>
+                    <select name="chd" class="chd" required>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div><br />
+                <div>
+                    <label>Hypoxemia:</label>
+                    <select name="hypoxemia" class="hypoxemia" required>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div><br />
+                <div>
+                    <label>Diabetes:</label>
+                    <select name="diabetes" class="diabetes" required>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div><br />
+                <div>
+                    <label>Bronchiectasis:</label>
+                    <select name="bronchiectasis" class="bronchiectasis" required>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>                                 
+            </div><br />
+            <div class="input-group">
+                <label>3. Other illness(mention if available):</label>
+                <input type="text" class="otherillness" placeholder="other illness or None" required>
+            </div>
+            <div class="input-group">
+                <label>4. Please list your current medication:</label>
+                <input type="text" class="curmedication" placeholder="eg: Antidepressant medication or None" required>
+            </div>
+            <div class="input-group">
+                <label>5. Alcohol Consumption:</label>
+                <select name="alcoholconsumption" class="alcoholconsumption" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <button type="submit" id="submit" class="btn">Submit</button>
+            </div>
+        </section>
+    </form>
+</body>
+</html>

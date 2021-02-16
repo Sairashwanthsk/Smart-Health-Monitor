@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Health Monitor Admin</title>
+    <link rel="stylesheet" type="text/css" href="css/adminud.css">
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.2/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.2/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script defer src="js/adminud.js"></script>
+</head>
+<header>
+    <div class="main">
+        <div class="logo">
+            <img src="logo.png">
+        </div>
+        <div class="title">
+            <h1>Smart Health Monitor</h1>
+            <li>
+                <a href="admindashboard.html">Dashboard</a>
+                <button type="submit" name="logout" onclick="logout()" class="btn">Logout</button>
+            </li>
+        </div>
+    </div>
+</header>
+<body>
+    <div id="userdetailsbody">
+        <h5>User details</h5>
+        <div id="udtable">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>D.O.B</th>
+                    <th>BloodGroup</th>
+                    <th>Age</th>
+                    <th>Height</th>
+                    <th>Weight</th>
+                    <th>Alcoholic</th>
+                    <th>Diabetes</th>
+                    <th>Asthma</th>
+                    <th>Bronchiectasis</th>
+                    <th>CHD</th>
+                    <th>Hypoxemia</th>
+                    <th>Other Illness</th>
+                    <th>Current Medication</th>
+                    <th>Drug Allergies</th>
+                    </tr>
+                </thead>
+                <tbody id="udbody"></tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

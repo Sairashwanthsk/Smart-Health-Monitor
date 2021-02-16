@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".RespirationFragment"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#37D3D3D3"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="Respiration Status"
+            android:textAlignment="center"
+            android:textColor="@color/primary"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/respiration_status"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="Records"
+            android:background="#37D3D3D3"
+            android:textAlignment="center"
+            android:textColor="@color/primary"
+            android:textSize="17sp" />
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/respiration_tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:background="#37D3D3D3"
+            app:tabIndicatorColor="@color/primary"
+            app:tabMode="fixed"
+            app:tabTextColor="@color/primary"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#37D3D3D3"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="Month"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:textColor="@color/primary_2"/>
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:textColor="@color/primary_2"/>
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Reading"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:textColor="@color/primary_2"/>
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                android:textAlignment="center"
+                android:textColor="@color/primary_2"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/respiration_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</LinearLayout>

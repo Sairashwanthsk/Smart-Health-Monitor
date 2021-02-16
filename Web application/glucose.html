@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Health Monitor</title>
+    <link rel="stylesheet" type="text/css" href="css/glucose.css">  
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.2/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.2/firebase-firestore.js"></script>
+    <script defer src="js/glucose.js"></script>
+</head>
+<header>
+    <div class="main">
+        <div class="logo">
+            <img src="logo.png">
+        </div>
+        <li>
+            <a href="Dashboard.html">Dashboard</a>
+            <a id="pro" href="profile1.html" class="profile">Profile</a>
+            <button type="submit" name="logout" onclick="logout()" class="btn">Logout</button>
+        </li>
+        <div class="title">
+            <h1>Smart Health Monitor</h1>
+        </div>
+    </div>
+</header>
+<body>
+    <div class="bodytitle">
+        <h1>Glucose level ></h1>
+    </div>
+    <div id="note">
+        <p><h4 style="position:relative; left:-90px; color:brown;">**Note:</h4><br> *Normal Glucose level is ranges upto 140mg/dl,<br />
+            *Glucose level ranges between 141mg/dl and 200mg/dl for more than 2hours is considered as Pre-Diabetes,<br />
+            *Glucose level more than 200mg/dl for more than 2hours is considered as Diabetes.
+         </p>
+    </div>
+    <div id="summary">
+        <h3>Summary</h3>
+    </div>
+    <div class="form">
+        <form class="gluform">
+            <div class="header">
+                <h2 class="headertitle">Record</h2>
+            </div>
+            <div class="Record">
+            <div class="input-group">
+                <label>Date:</label>
+                <input type="date" class="dates" id="date">
+            </div>
+            <div class="input-group">
+                <label>Glucose reading:</label>
+                <input type="number" class="glucose_reading" id="glucose_reading" placeholder="eg: 120">
+            </div>
+            <div class="input-group">
+                <button type="submit" class="btn1">Record</button>
+            </div>
+            </div>
+        </form>
+    </div> 
+    <div id="track">
+        <div id="trackhead">
+            <h3 id="m">Month</h3>
+            <h3 id="d">Date</h3>
+            <h3 id="r">Reading</h3>
+            <h3 id="s">Status</h3>
+        </div>
+        <div id="trackbody"></div>
+    </div>
+</body>
+</html>

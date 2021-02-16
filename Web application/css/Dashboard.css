@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/*Head of website*/
+header{
+    height: 60px;
+    width: 100%;
+    background-color: rgba(26, 100, 150, 0.986);
+}
+li{
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+    margin-right: 25px;
+}
+
+li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 19px 10px;
+    position: relative;
+    top: -25px;
+    left: -20px;
+    border: 1px solid transparent;
+    transition: 0.4s ease;
+    display: inline-block;
+}
+li a#pro{
+    text-align: center;
+    width: 60px;
+}
+li a:hover{
+    background-color:  rgba(255, 255, 255, 0.829);
+    color: black;
+}
+li a.active{
+    background-color:  rgba(255, 255, 255, 0.829);
+    color: black;
+}
+.btn{
+    position: relative;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    top: -25px;
+    background-color: rgba(26, 100, 150, 0.986);
+    color: white;
+}
+.btn:hover{
+    background-color: rgb(204, 41, 20);
+}
+.logo img{
+    float: left;
+    width: 70px;
+    height: 100%;
+}
+.title h1{
+    float: left;
+    position: relative;
+    top: 15px;
+    left: 20px;
+    color: white;
+    font-size: large;
+}
+
+
+body {
+    overflow: hidden;
+    background-image:linear-gradient(rgba(52, 52, 182, 0.151),rgba(52, 52, 182, 0.212)), url(../background5.jpeg);
+    height: 100vh;
+    background-size: cover;
+}
+/*Heart Health Button*/
+#Hearthealth{
+    float: left;
+    top: 30px;
+    left: 30px;
+    width: 180px;
+    height: 300px;
+    position: relative;
+    border: 1px solid white;
+    text-align: center;
+    border-radius: 10px;
+    background-color:rgba(240, 235, 235,0.8);
+    transition: 0.4s ease;
+    text-decoration: none;
+}
+#Hearthealth h4{
+    position: relative;
+    top: 20%;
+    color: black;
+}
+#Hearthealth:hover{
+    background-color:  rgba(34, 216, 43, 0.658);
+    color: black;
+    
+}
+
+/*Glucose Level Button*/
+#Glucoselevel{
+    float: left;
+    width: 180px;
+    height: 300px;
+    top: 30px;
+    left: 50px;
+    position: relative;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color:rgba(240, 235, 235,0.8);
+    transition: 0.4s ease;
+    text-align: center;
+    text-decoration: none;
+}
+#Glucoselevel h4{
+    position: relative;
+    top: 20%;
+    color: black;
+}
+#Glucoselevel:hover{
+    background-color:  rgba(34, 216, 43, 0.658);
+    color: black;
+}
+
+/*Respiration Button*/
+#respiration{
+    float: left;
+    width: 180px;
+    height: 300px;
+    top: 30px;
+    left: 70px;
+    border: 1px solid white;
+    text-align: center;
+    border-radius: 10px;
+    background-color:rgba(240, 235, 235,0.8);
+    transition: 0.4s ease;
+    position: relative;
+    text-decoration: none;
+}
+#respiration h4{
+    position: relative;
+    top: 20%;
+    color: black;
+}
+#respiration:hover{
+    background-color:  rgba(34, 216, 43, 0.658);
+    color: black;
+}
+
+#healthway{
+    float: left;
+    width: 180px;
+    height: 300px;
+    top: 30px;
+    left: 90px;
+    border: 1px solid white;
+    text-align: center;
+    border-radius: 10px;
+    background-color:rgba(240, 235, 235,0.8);
+    transition: 0.4s ease;
+    position: relative;
+    text-decoration: none;
+}
+#healthway h4{
+    position: relative;
+    top: 20%;
+    color: black;
+}
+#healthway:hover{
+    background-color:  rgba(34, 216, 43, 0.658);
+    color: black;
+}
+#notification{
+    float: right;
+    position: relative;
+    left: -20px;
+    width: 220px;
+    height: 510px;
+    background-color: rgba(255, 255, 255, 0.911);
+    overflow-y: scroll;
+}
+#notificationbody{
+    padding: 10px;
+}

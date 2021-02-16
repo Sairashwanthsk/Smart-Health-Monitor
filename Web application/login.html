@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.2/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.2/firebase-firestore.js"></script>
+    <script defer src="js/credentials.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h2>Login</h2>
+    </div>
+    <section>
+        <div class="input-group">
+            <label>Email-Id</label>
+            <input type="text" id="email" >
+        </div>
+        <div class="input-group">
+            <label>Password</label>
+            <input type="password" id="password">
+        </div>
+        <div class="input-group">
+            <button type="submit" id="login" class="btn" onclick="login()">Login</button>
+        </div>
+        <p>
+            Not yet have an account?<a href="register.html">Register</a>
+        </p>
+    </section>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Health Monitor</title>
+    <link rel="stylesheet" type="text/css" href="css/profile.css">  
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.2/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.2/firebase-firestore.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.2/firebase-storage.js"></script>
+    <script defer src="js/profile.js"></script>
+</head>
+<header>
+    <div class="main">
+        <div class="logo">
+            <img src="logo.png">
+        </div>
+        <div class="title">
+            <h1>Smart Health Monitor</h1>
+        </div>
+        <li>
+            <a href="Dashboard.html">Dashboard</a>
+            <a class="active" id="pro" href="profile1.html" class="profile">Profile</a>
+            <button type="submit" name="logout" onclick="logout()" class="btn">Logout</button>
+        </li>
+    </div>
+        
+</header>
+<body>
+    <section class="profilebody">
+        <section class="profileimg" id="profileimg">
+            <div class="proimg">
+                <img id="proimg" height="150" width="150">
+            </div>
+            <div class="chooseprofile">
+                <label for="file"><img src="probtn.jpeg" style="height: 40; width: 40; position: relative; top: 5px; left: 5px;"></label>
+                <input type="file" id="file" accept="image/*" onchange="chooseprofile(event)">
+            </div><br />
+        </section>
+        <section class="personal_info_section">
+            <h1 class="pi"><img class="perlogo" src="personal logo.jpg" alt=""> Personal Information</h1>
+            <div id="personal_info"></div>
+        </section>
+        <section class="medical_history_section">
+            <h1 class="mh"><img class="mhlogo" src="infosymbol.png" alt=""> Employee Medical History</h1>
+            <div id="medical_history"></div>
+        </section>
+        <a href="personalinfo.html" id="editprofile">Edit Profile</a>
+    </section>
+</body>
+</html>

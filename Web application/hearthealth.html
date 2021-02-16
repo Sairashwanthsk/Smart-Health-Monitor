@@ -1,0 +1,100 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Health Monitor</title>
+    <link rel="stylesheet" type="text/css" href="css/hearthealth.css">  
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.2/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.2/firebase-firestore.js"></script>
+    <script defer src="js/hearthealth.js"></script>
+</head>
+<header>
+    <div class="main">
+        <div class="logo">
+            <img src="logo.png">
+        </div>
+        <div class="title">
+            <h1>Smart Health Monitor</h1>
+        </div>
+        <li>
+            <a href="Dashboard.html">Dashboard</a>
+            <a id="pro" href="profile1.html" class="profile">Profile</a>
+            <button type="submit" name="logout" onclick="logout()" class="btn">Logout</button>
+        </li>
+    </div>
+</header>
+<body>
+    <div class="bodytitle">
+        <h1>Heart health ></h1>
+    </div>
+    <div id="hhealthsummary">
+        <h3>Heart Health</h3>
+    </div>
+    <div id="track1">
+        <div id="trackhead1">
+            <h3 id="m">Month</h3>
+            <h3 id="d">Date</h3>
+            <h3 id="p">Pulse</h3>
+            <h3 id="s">Status</h3>
+        </div>
+        <div id="trackbody1"></div>
+    </div>
+    <div id="track2">
+        <div id="trackhead2">
+            <h3 id="m">Month</h3>
+            <h3 id="d">Date</h3>
+            <h3 id="bp">Blood pressure</h3>
+            <h3 id="s">Status</h3>
+        </div>
+        <div id="trackbody2"></div>
+    </div>
+    <div id="track3">
+        <div id="trackhead3">
+            <h3 id="m">Month</h3>
+            <h3 id="d">Date</h3>
+            <h3 id="c">Cholestrol</h3>
+            <h3 id="s">Status</h3>
+        </div>
+        <div id="trackbody3"></div>
+    </div>
+    <div class="form">
+        <form class="hearthealthform">
+            <div class="header">
+                <h2 class="headertitle">Record</h2>
+            </div>
+            <div class="Record">
+            <div class="input-group">
+                <label>Date:</label>
+                <input type="date" id="date" required>
+            </div>
+            <div class="input-group">
+                <label>Pulse:</label>
+                <input type="number" id="pulse" placeholder="eg: 80" required>
+            </div>
+            <div class="input-group">
+                <label>Systolic_Bp:</label>
+                <input type="text" id="sbp" placeholder="eg: systolic-(120)/80" required>
+            </div>
+            <div class="input-group">
+                <label>Diastolic_Bp:</label>
+                <input type="text" id="dbp" placeholder="eg: 120/(80)-Diastolic" required>
+            </div>            
+            <div class="input-group">
+                <label>Cholestrol:</label>
+                <input type="number" id="cholestrol" placeholder="eg: 150" required>
+            </div>
+            <div class="input-group">
+                <button type="submit" class="btn1">Record</button>
+            </div>
+            </div>
+        </form>
+    </div>
+    <div id="note">
+        <p><h4 style="float: left;position:relative; left:0px; color:brown;">**Note:</h4><br /><br /> *Pulse is the rate at which the heart pumps the blood. Normal Pulse level ranges from 60bpm to 100bpm(beats per minute),<br>
+            *Blood pressure is the pressure created by the flow of blood in the blood vessels. Normal Blood pressure level ranges from 90/60mmHg to 120/80mmHg,<br>
+            *Cholesterol is fat-like substance sedimented in the blood vessels due to intake of high fat content foods. Normal Cholesterol level ranges from 125mg/dl to 200mg/dl.
+         </p>
+    </div> 
+</body>
+</html>

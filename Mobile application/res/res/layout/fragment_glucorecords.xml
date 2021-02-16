@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="5dp"
+    tools:context=".glucorecords">
+
+    <TextView
+        android:id="@+id/glucomonth"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="13sp"/>
+    <TextView
+        android:id="@+id/glucodate"
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/glucoreading"
+        android:layout_width="87.5dp"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/gluco_status2"
+        android:layout_width="87.5dp"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textColor="@color/black"/>
+
+</LinearLayout>
