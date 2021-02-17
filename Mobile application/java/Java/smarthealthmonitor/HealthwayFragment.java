@@ -80,135 +80,175 @@ public class HealthwayFragment extends Fragment {
                         Long greading = doc.getLong("GReading");
                         Long treading = doc.getLong("TReading");
 
-                        if(treading > 98){
-                            temperature.setTextColor(Color.RED);
-                            temperature.setText("High Temperature");
-                        } else if (treading < 96){
-                            temperature.setTextColor(Color.RED);
-                            temperature.setText("Low Temperature");
-                        } else {
-                            temperature.setTextColor(Color.GREEN);
-                            temperature.setText("Normal");
-                        }
-
-                        if(preading < 60){
-                            pulse.setTextColor(Color.RED);
-                            pulse.setText("Low pulse");
-                        }else if(preading > 100){
-                            pulse.setTextColor(Color.RED);
-                            pulse.setText("High pulse");
-                        } else {
-                            pulse.setTextColor(Color.GREEN);
-                            pulse.setText("Normal");
-                        }
-
-                        if(oreading < 98){
-                            spo2.setTextColor(Color.RED);
-                            spo2.setText("Hypoxemia");
-                        } else {
-                            spo2.setTextColor(Color.GREEN);
-                            spo2.setText("Normal");
-                        }
-
-                        if((greading > 140 && greading <= 199)){
-                            glucose.setTextColor(Color.RED);
-                            glucose.setText("Pre-diabetes");
-                        }else if(greading >= 200){
-                            glucose.setTextColor(Color.RED);
-                            glucose.setText("Diabetes");
-                        } else {
-                            glucose.setTextColor(Color.GREEN);
-                            glucose.setText("Normal");
-                        }
-
-                        if(rreading > 20){
-                            respirationrate.setTextColor(Color.RED);
-                            respirationrate.setText("High Respiration rate");
-                        }else if(rreading < 12){
-                            respirationrate.setTextColor(Color.RED);
-                            respirationrate.setText("Low Respiration rate");
-                        } else {
-                            respirationrate.setTextColor(Color.GREEN);
-                            respirationrate.setText("Normal");
-                        }
-
-                        if(creading > 200){
-                            cholesterol.setTextColor(Color.RED);
-                            cholesterol.setText("High cholesterol");
-                        }else if(creading < 125){
-                            cholesterol.setTextColor(Color.RED);
-                            cholesterol.setText("Low cholesterol");
-                        } else {
-                            cholesterol.setTextColor(Color.GREEN);
-                            cholesterol.setText("Normal");
-                        }
-
-                        if((sreading > 120 && sreading < 130) && (dreading <= 90)){
-                            bp.setTextColor(Color.RED);
-                            bp.setText("Elevated BP");
-                        }else if((sreading >= 130 && sreading < 140) && (dreading <= 100)){
-                            bp.setTextColor(Color.RED);
-                            bp.setText("High BP stage-I");
-                        }else if((sreading >= 140 && sreading < 180) && (dreading <= 120)){
-                            bp.setTextColor(Color.RED);
-                            bp.setText("High BP stage-II");
-                        }else if(sreading > 180 && dreading > 120){
-                            bp.setTextColor(Color.RED);
-                            bp.setText("High BP stage-III");
-                        } else {
-                            bp.setTextColor(Color.GREEN);
-                            bp.setText("Normal");
-                        }
-
-                        if ((sreading <= 140 && dreading <= 80) && (preading >= 60 && preading <= 100) && (creading >= 125 && creading <= 200)) {
-                            hhealth.setTextColor(Color.GREEN);
-                            hhealth.setText("Healthy");
-                        } else {
-                            hhealth.setTextColor(Color.RED);
-                            hhealth.setText("Unhealthy");
-                        }
-                        if ((oreading >= 98) && (preading >= 60 && preading <= 100) && (rreading >= 12 && rreading <= 20)) {
-                            rhealth.setTextColor(Color.GREEN);
-                            rhealth.setText("Healthy");
-                        } else {
-                            if ((oreading >= 92 && oreading <= 95) && (preading > 100) && (rreading > 20)) {
-                                rhealth.setTextColor(Color.RED);
-                                rhealth.setText("Asthma");
+                        if(treading != null) {
+                            if (treading > 98) {
+                                temperature.setTextColor(Color.RED);
+                                temperature.setText("High Temperature");
+                            } else if (treading < 96) {
+                                temperature.setTextColor(Color.RED);
+                                temperature.setText("Low Temperature");
                             } else {
-                                rhealth.setTextColor(Color.RED);
-                                rhealth.setText("unhealthy");
+                                temperature.setTextColor(Color.GREEN);
+                                temperature.setText("Normal");
                             }
+                        }else {
+                            temperature.setText("Unavailable");
                         }
 
-                        if ((greading <= 140) && (sreading <= 120 && dreading <= 80) && (preading >= 60 && preading <= 100) && (creading >= 125 && creading <= 200) && (oreading >= 98) && (rreading >= 12 && rreading <= 20)) {
-                            status.setTextColor(Color.GREEN);
-                            status.setText("Healthy");
-                        } else {
-                            if (greading > 200 && !((sreading <= 140 && dreading <= 80) && (preading >= 60 && preading <= 100) && (creading >= 125 && creading <= 200)) && ((oreading >= 92 && oreading <= 95) && (preading > 100) && (rreading > 20))) {
-                                status.setTextColor(Color.RED);
-                                status.setText("Diabetes" + "," + "\n" + "Coronary Artery Disease" + "," + "\n" + "Asthma");
-                            } else if ((greading > 140 && greading <= 200) && !((sreading <= 140 && dreading <= 80) && (preading >= 60 && preading <= 100) && (creading >= 125 && creading <= 200)) && ((oreading >= 92 && oreading <= 95) && (preading > 100) && (rreading > 20))) {
-                                status.setTextColor(Color.RED);
-                                status.setText("Pre-Diabetes" + "," + "\n" + "Coronary Artery Disease" + "," + "\n" + "Asthma");
-                            } else if (greading > 200 && !((sreading <= 140 && dreading <= 80) && (preading >= 60 && preading <= 100) && (creading >= 125 && creading <= 200))) {
-                                status.setTextColor(Color.RED);
-                                status.setText("Diabetes" + "," + "\n" + "Coronary Artery Disease");
-                            } else if ((greading > 140 && greading <= 200) && !((sreading <= 140 && dreading <= 80) && (preading >= 60 && preading <= 100) && (creading >= 125 && creading <= 200))) {
-                                status.setTextColor(Color.RED);
-                                status.setText("Pre-Diabetes" + "," + "\n" + "Coronary Artery Disease");
-                            } else if (!((sreading <= 140 && dreading <= 80) && (preading >= 60 && preading <= 100) && (creading >= 125 && creading <= 200)) && ((oreading >= 92 && oreading <= 95) && (preading > 100) && (rreading > 20))) {
-                                status.setTextColor(Color.RED);
-                                status.setText("CoronaryArtery Disease" + "," + "\n" + "Asthma");
-                            } else if ((greading > 140 && greading <= 200) && ((oreading >= 92 && oreading <= 95) && (preading > 100) && (rreading > 20))) {
-                                status.setTextColor(Color.RED);
-                                status.setText("Pre-Diabetes" + "," + "\n" + "Asthma");
-                            } else if (greading > 200 && ((oreading >= 92 && oreading <= 95) && (preading > 100) && (rreading > 20))) {
-                                status.setTextColor(Color.RED);
-                                status.setText("Diabetes" + "," + "\n" + "Asthma");
+                        if(preading != null) {
+                            if (preading < 60) {
+                                pulse.setTextColor(Color.RED);
+                                pulse.setText("Low pulse");
+                            } else if (preading > 100) {
+                                pulse.setTextColor(Color.RED);
+                                pulse.setText("High pulse");
                             } else {
-                                status.setTextColor(Color.RED);
-                                status.setText("Unhealthy");
+                                pulse.setTextColor(Color.GREEN);
+                                pulse.setText("Normal");
                             }
+                        } else {
+                            pulse.setText("Unavailable");
+                        }
+
+                        if(oreading != null) {
+                            if (oreading < 98) {
+                                spo2.setTextColor(Color.RED);
+                                spo2.setText("Hypoxemia");
+                            } else {
+                                spo2.setTextColor(Color.GREEN);
+                                spo2.setText("Normal");
+                            }
+                        } else {
+                            spo2.setText("Unavailable");
+                        }
+
+                        if(greading != null) {
+                            if ((greading > 140 && greading <= 199)) {
+                                glucose.setTextColor(Color.RED);
+                                glucose.setText("Pre-diabetes");
+                            } else if (greading >= 200) {
+                                glucose.setTextColor(Color.RED);
+                                glucose.setText("Diabetes");
+                            } else {
+                                glucose.setTextColor(Color.GREEN);
+                                glucose.setText("Normal");
+                            }
+                        } else {
+                            glucose.setText("Unavailable");
+                        }
+
+                        if(rreading != null) {
+                            if (rreading > 20) {
+                                respirationrate.setTextColor(Color.RED);
+                                respirationrate.setText("High Respiration rate");
+                            } else if (rreading < 12) {
+                                respirationrate.setTextColor(Color.RED);
+                                respirationrate.setText("Low Respiration rate");
+                            } else {
+                                respirationrate.setTextColor(Color.GREEN);
+                                respirationrate.setText("Normal");
+                            }
+                        } else {
+                            respirationrate.setText("Unavailable");
+                        }
+
+                        if(creading != null) {
+                            if (creading > 200) {
+                                cholesterol.setTextColor(Color.RED);
+                                cholesterol.setText("High cholesterol");
+                            } else if (creading < 125) {
+                                cholesterol.setTextColor(Color.RED);
+                                cholesterol.setText("Low cholesterol");
+                            } else {
+                                cholesterol.setTextColor(Color.GREEN);
+                                cholesterol.setText("Normal");
+                            }
+                        } else {
+                            cholesterol.setText("Unavailable");
+                        }
+
+                        if(sreading != null || dreading != null) {
+                            if ((sreading > 120 && sreading < 130) && (dreading <= 90)) {
+                                bp.setTextColor(Color.RED);
+                                bp.setText("Elevated BP");
+                            } else if ((sreading >= 130 && sreading < 140) && (dreading <= 100)) {
+                                bp.setTextColor(Color.RED);
+                                bp.setText("High BP stage-I");
+                            } else if ((sreading >= 140 && sreading < 180) && (dreading <= 120)) {
+                                bp.setTextColor(Color.RED);
+                                bp.setText("High BP stage-II");
+                            } else if (sreading > 180 && dreading > 120) {
+                                bp.setTextColor(Color.RED);
+                                bp.setText("High BP stage-III");
+                            } else {
+                                bp.setTextColor(Color.GREEN);
+                                bp.setText("Normal");
+                            }
+                        } else {
+                            bp.setText("Unavailable");
+                        }
+
+                        if((sreading!=null || dreading!=null) && (preading!=null) && (creading!=null)) {
+                            if ((sreading <= 140 && dreading <= 80) && (preading >= 60 && preading <= 100) && (creading >= 125 && creading <= 200)) {
+                                hhealth.setTextColor(Color.GREEN);
+                                hhealth.setText("Healthy");
+                            } else {
+                                hhealth.setTextColor(Color.RED);
+                                hhealth.setText("Unhealthy");
+                            }
+                        }else {
+                                hhealth.setText("Unavailable");
+                        }
+                        if(oreading!=null && preading!=null && rreading!=null){
+                            if ((oreading >= 98) && (preading >= 60 && preading <= 100) && (rreading >= 12 && rreading <= 20)) {
+                                rhealth.setTextColor(Color.GREEN);
+                                rhealth.setText("Healthy");
+                            } else {
+                                if ((oreading >= 92 && oreading <= 95) && (preading > 100) && (rreading > 20)) {
+                                    rhealth.setTextColor(Color.RED);
+                                    rhealth.setText("Asthma");
+                                } else {
+                                    rhealth.setTextColor(Color.RED);
+                                    rhealth.setText("unhealthy");
+                                }
+                            }
+                        } else {
+                            rhealth.setText("Unavailable");
+                        }
+
+                        if((greading!=null) && (sreading!=null || dreading!=null) && (preading!=null) && (creading!=null) && (oreading!=null) && (rreading!=null)) {
+                            if ((greading <= 140) && (sreading <= 120 && dreading <= 80) && (preading >= 60 && preading <= 100) && (creading >= 125 && creading <= 200) && (oreading >= 98) && (rreading >= 12 && rreading <= 20)) {
+                                status.setTextColor(Color.GREEN);
+                                status.setText("Healthy");
+                            } else {
+                                if (greading > 200 && !((sreading <= 140 && dreading <= 80) && (preading >= 60 && preading <= 100) && (creading >= 125 && creading <= 200)) && ((oreading >= 92 && oreading <= 95) && (preading > 100) && (rreading > 20))) {
+                                    status.setTextColor(Color.RED);
+                                    status.setText("Diabetes" + "," + "\n" + "Coronary Artery Disease" + "," + "\n" + "Asthma");
+                                } else if ((greading > 140 && greading <= 200) && !((sreading <= 140 && dreading <= 80) && (preading >= 60 && preading <= 100) && (creading >= 125 && creading <= 200)) && ((oreading >= 92 && oreading <= 95) && (preading > 100) && (rreading > 20))) {
+                                    status.setTextColor(Color.RED);
+                                    status.setText("Pre-Diabetes" + "," + "\n" + "Coronary Artery Disease" + "," + "\n" + "Asthma");
+                                } else if (greading > 200 && !((sreading <= 140 && dreading <= 80) && (preading >= 60 && preading <= 100) && (creading >= 125 && creading <= 200))) {
+                                    status.setTextColor(Color.RED);
+                                    status.setText("Diabetes" + "," + "\n" + "Coronary Artery Disease");
+                                } else if ((greading > 140 && greading <= 200) && !((sreading <= 140 && dreading <= 80) && (preading >= 60 && preading <= 100) && (creading >= 125 && creading <= 200))) {
+                                    status.setTextColor(Color.RED);
+                                    status.setText("Pre-Diabetes" + "," + "\n" + "Coronary Artery Disease");
+                                } else if (!((sreading <= 140 && dreading <= 80) && (preading >= 60 && preading <= 100) && (creading >= 125 && creading <= 200)) && ((oreading >= 92 && oreading <= 95) && (preading > 100) && (rreading > 20))) {
+                                    status.setTextColor(Color.RED);
+                                    status.setText("CoronaryArtery Disease" + "," + "\n" + "Asthma");
+                                } else if ((greading > 140 && greading <= 200) && ((oreading >= 92 && oreading <= 95) && (preading > 100) && (rreading > 20))) {
+                                    status.setTextColor(Color.RED);
+                                    status.setText("Pre-Diabetes" + "," + "\n" + "Asthma");
+                                } else if (greading > 200 && ((oreading >= 92 && oreading <= 95) && (preading > 100) && (rreading > 20))) {
+                                    status.setTextColor(Color.RED);
+                                    status.setText("Diabetes" + "," + "\n" + "Asthma");
+                                } else {
+                                    status.setTextColor(Color.RED);
+                                    status.setText("Unhealthy");
+                                }
+                            }
+                        } else {
+                            status.setText("Unavailable");
                         }
                     }
                 }
