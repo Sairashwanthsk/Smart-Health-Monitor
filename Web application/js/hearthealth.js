@@ -158,25 +158,25 @@ firebase.auth().onAuthStateChanged(function(user) {
       }
       else{
         if(preading < 60){
-          totalsummary.innerHTML += "<p style='color:darkgoldenrod;'>Low pulse<br></p>"
+          hhealthsummary.innerHTML += "<p style='float:left;font-size:20px; position:relative; top:100px; left:50px; color:darkgoldenrod; padding:5px;width:150px;'>Low pulse<br></p>"
         }
         if(preading > 100){
-          totalsummary.innerHTML += "<p style='color:red;'>High pulse<br></p>"
+          hhealthsummary.innerHTML += "<p style='color:red; float:left;font-size:20px; position:relative; top:100px; left:50px; padding:5px;width:150px;'>High pulse<br></p>"
         }
         if((sreading > 120 && sreading <= 130) && (dreading <= 90)){
-          totalsummary.innerHTML += "<p style='color:darkgoldenrod;'>Elevated Blood pressure<br></p>"
+          hhealthsummary.innerHTML += "<p style='color:darkgoldenrod; float:left;font-size:20px; position:relative; top:100px; left:50px; padding:5px;width:150px;'>Elevated Blood pressure<br></p>"
         }
         if((sreading > 130 && sreading <= 140) && (dreading <= 100)){
-          totalsummary.innerHTML += "<p style='color:orange;'>High Bp Stage-I<br></p>"
+          hhealthsummary.innerHTML += "<p style='color:orange; float:left;font-size:20px; position:relative; top:100px; left:50px; padding:5px;width:150px;'>High Bp Stage-I<br></p>"
         }
         if((sreading > 140 && sreading <= 180) && (dreading <= 120)){
-          totalsummary.innerHTML += "<p style='color:red;'>High Bp Stage-II<br></p>"
+          hhealthsummary.innerHTML += "<p style='color:red; float:left;font-size:20px; position:relative; top:100px; left:50px; padding:5px;width:150px;'>High Bp Stage-II<br></p>"
         }
         if(sreading > 180 && dreading > 120){
-          totalsummary.innerHTML += "<p style='color:darkred;'>High Bp Stage-III<br></p>"
+          hhealthsummary.innerHTML += "<p style='color:darkred; float:left;font-size:20px; position:relative; top:100px; left:50px; padding:5px;width:150px;'>High Bp Stage-III<br></p>"
         }
         if(creading > 200) {
-          totalsummary.innerHTML += "<p style='color:red;'>High Cholesterol<br></p>"
+          hhealthsummary.innerHTML += "<p style='color:red; float:left;font-size:20px; position:relative; top:100px; left:50px; padding:5px;width:150px;'>High Cholesterol<br></p>"
         }
       }
     })
