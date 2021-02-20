@@ -1,11 +1,5 @@
-var firebaseConfig = {
-    apiKey: "AIzaSyDAF_vfIespDU1d6GQpAkppS2rOQu_Z_U8",
-    authDomain: "smart-health-monitor-2f5d5.firebaseapp.com",
-    projectId: "smart-health-monitor-2f5d5",
-    storageBucket: "smart-health-monitor-2f5d5.appspot.com",
-    messagingSenderId: "741530269873",
-    appId: "1:741530269873:web:e8987123338aafc97c0a90"
-  };
+// Link Firebase confidential configuration for connecting firebase.
+
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
